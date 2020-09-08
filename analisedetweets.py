@@ -28,10 +28,10 @@ print(df['tweet_trat'].count())
 # Verifica quantos RT's foram feitos
 print(df[df["rts"]==0].count()["rts"])
 
-# Verifica quem foram os 10 mais que tuitaram
+# Verifica quais foram os 10 mais que tuitaram
 print(df.groupby('screen_name')['screen_name'].count().nlargest(10).reset_index(name='TOT_TWEET'))
 
-# Verifica quem foram os 10 mais que retuitaram
+# Verifica quais foram os 10 mais que retuitaram
 print(df.groupby('screen_name')['rts'].sum().nlargest(10).reset_index(name='TOT_RETWEET'))
 
 # Cria-se um novo dataframe filtrando somente os casos igual a 1 no campo rts
