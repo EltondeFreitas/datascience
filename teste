@@ -1,68 +1,122 @@
-**Especificação de Requisitos para o Fórum Data Lake**
-=====================================================
+# Especificação de Requisitos para Análise de Dados no Fórum Data Lake
 
-**Introdução**
---------------
+## Visão Geral
 
-O Fórum Data Lake é uma plataforma projetada para fomentar a tomada de decisões baseadas em dados em diferentes áreas de negócios. Esta especificação de requisitos descreve as necessidades para análise de dados para abordar pontos de dor específicos e melhorar os resultados do negócio.
+O Fórum Data Lake tem como objetivo centralizar e facilitar o acesso a dados relevantes para diversas áreas de negócio, promovendo uma cultura baseada em dados (data-driven) dentro da organização. Esta especificação de requisitos descreve as necessidades e dores das áreas de Marketing e Vendas, bem como os sistemas envolvidos na integração de dados.
 
-**Requisitos Funcionais**
--------------------------
+## Objetivos
 
-### Cultura Baseada em Dados
+- Promover a cultura baseada em dados (data-driven) na organização.
+- Reduzir o tempo necessário para consumir e analisar dados contábeis e de receitas.
+- Endereçar as dores específicas das áreas de Marketing e Vendas.
+- Integrar sistemas essenciais ao Data Lake.
 
-* A plataforma deve promover uma cultura baseada em dados, fornecendo acesso fácil e seguro a dados relevantes e insights.
-* A plataforma deve permitir a visualização e narrativa de dados para facilitar a compreensão e comunicação de insights.
-* A plataforma deve fornecer ferramentas para análise de dados, permitindo que os usuários realizem consultas e análises personalizadas.
+## Requisitos Funcionais
 
-### Consumo de Dados
+### 1. Cultura Baseada em Dados (Data-Driven)
 
-* A plataforma deve fornecer métricas de consumo de dados em tempo real para dados financeiros (contábil) e receitas.
-* A plataforma deve permitir a definição de intervalos de tempo para a coleta de dados, permitindo que os usuários analisem tendências e padrões.
+- **Descrição**: Incentivar a utilização de dados para a tomada de decisões em todas as áreas da organização.
+- **Métricas de Sucesso**:
+  - Redução do tempo de acesso a dados.
+  - Aumento no número de decisões baseadas em análises de dados.
 
-### Dores
----------
+### 2. Consumo de Dados Contábeis e de Receitas
 
-#### Marketing
+- **Descrição**: Minimizar o tempo necessário para que usuários acessem e utilizem dados contábeis e de receitas.
+- **Requisitos Específicos**:
+  - Disponibilização de dashboards interativos.
+  - Relatórios automáticos e periódicos.
+  - Acesso em tempo real aos dados.
 
-* A plataforma deve fornecer insights sobre:
-	+ Vips e clientes recorrentes
-	+ Perfis de clientes por loja
-	+ Dificuldades em campanhas
-	+ Análise por produto X (por exemplo, produto específico)
-	+ Análise por canal (por exemplo, redes sociais, e-mail)
-	+ Utilização de Machine Learning (ML) para predição e personalização
-* A plataforma deve permitir a criação de relatórios personalizados para cada campanha, incluindo métricas de desempenho e recomendações para melhoria.
+## Dores das Áreas de Negócio
 
-#### Vendas
+### 3. Marketing
 
-* A plataforma deve fornecer insights sobre:
-	+ Falta de acompanhamento em vendas B2B
-	+ Sugestões de produtos antes que os clientes precisem
-* A plataforma deve permitir a criação de relatórios personalizados para cada loja, incluindo métricas de desempenho e recomendações para melhoria.
+#### 3.1 Campanhas
 
-### Sistemas
---------------
+- **Descrição**: Melhorar a eficácia das campanhas de marketing através de análises detalhadas.
+- **Sub-requisitos**:
+  - **Vips**: Identificação e análise do comportamento de clientes VIPs.
+  - **Clientes Recorrentes**: Segmentação e análise de clientes recorrentes.
 
-#### A Caminho do Lake
+#### 3.2 Perfil de Clientes por Loja
 
-* A plataforma deve integrar com os sistemas Shopify e Protheus para coletar dados de vendas e financeiros.
-* A plataforma deve permitir a importação de dados de outros sistemas, como Sellbie.
+- **Descrição**: Análise detalhada do perfil dos clientes em cada loja.
+- **Requisitos Específicos**:
+  - Relatórios de perfil demográfico e comportamental por loja.
 
-**Requisitos Não-Funcionais**
----------------------------
+#### 3.3 Campanha Dificuldades
 
-### Desempenho
+- **Descrição**: Identificação das dificuldades encontradas nas campanhas de marketing.
+- **Requisitos Específicos**:
+  - Relatórios de desempenho das campanhas.
+  - Feedbacks e insights sobre pontos de melhoria.
 
-* A plataforma deve ser capaz de processar grandes volumes de dados em tempo real.
-* A plataforma deve fornecer respostas rápidas e precisas para consultas e análises.
+#### 3.4 Análise por Produto X
 
-### Segurança
+- **Descrição**: Realizar análises específicas por produto.
+- **Requisitos Específicos**:
+  - Dashboards por produto.
+  - Relatórios de vendas e desempenho por produto.
 
-* A plataforma deve garantir a segurança e confidencialidade dos dados coletados.
-* A plataforma deve fornecer autenticação e autorização para garantir que apenas usuários autorizados tenham acesso aos dados.
+#### 3.5 Análise por Canal
 
-### Usabilidade
+- **Descrição**: Analisar a performance de campanhas por diferentes canais de marketing.
+- **Requisitos Específicos**:
+  - Relatórios e dashboards por canal de marketing.
 
-* A plataforma deve ser fácil de usar e navegar, com uma interface intuitiva e fácil de entender.
-* A plataforma deve fornecer ajuda e suporte para os usuários, incluindo documentação e treinamento.
+#### 3.6 Machine Learning (ML)
+
+- **Descrição**: Implementar modelos de Machine Learning para prever tendências e comportamentos.
+- **Requisitos Específicos**:
+  - Modelos preditivos para segmentação de clientes.
+  - Análise preditiva para campanhas de marketing.
+
+### 4. Vendas
+
+#### 4.1 B2B
+
+##### 4.1.1 Falta de Acompanhamento
+
+- **Descrição**: Melhorar o acompanhamento das vendas B2B.
+- **Requisitos Específicos**:
+  - Dashboards de acompanhamento de vendas.
+  - Relatórios periódicos de status e progresso.
+
+##### 4.1.2 Sugerir Antes do Cliente Precisar
+
+- **Descrição**: Implementar sistemas de sugestão proativa para clientes B2B.
+- **Requisitos Específicos**:
+  - Modelos de previsão de necessidades dos clientes.
+  - Alertas e notificações automáticas.
+
+## Integração de Sistemas
+
+### 5. Sistemas a Caminho do Data Lake
+
+#### 5.1 Shopify
+
+- **Descrição**: Integração de dados de vendas e e-commerce.
+- **Requisitos Específicos**:
+  - Extração de dados de vendas.
+  - Integração com o Data Lake para análise centralizada.
+
+#### 5.2 Protheus
+
+- **Descrição**: Integração de dados contábeis e financeiros.
+- **Requisitos Específicos**:
+  - Extração de dados contábeis.
+  - Integração com o Data Lake para relatórios financeiros.
+
+### 6. Outros Sistemas
+
+#### 6.1 Sellbie
+
+- **Descrição**: Integração de dados de CRM e gestão de vendas.
+- **Requisitos Específicos**:
+  - Extração de dados de CRM.
+  - Integração com o Data Lake para análise de clientes e vendas.
+
+## Conclusão
+
+Esta especificação de requisitos visa a construção de um Data Lake robusto e eficiente, capaz de atender às necessidades das áreas de Marketing e Vendas, e promover uma cultura data-driven na organização. A integração dos sistemas citados é crucial para garantir a centralização e a acessibilidade dos dados, facilitando análises detalhadas e a tomada de decisões estratégicas.
